@@ -1,0 +1,278 @@
+<div class="card">
+    <!-- <h3 class="card-header">Active Issues</h3> -->
+    <div class="card-block">
+
+        <!-- <div *ngIf="statusCounts" class="row">
+
+            <div class="col-12 col-lg-6 col-xl pb-4 active-issues">
+                <span class="comp-label">
+                    <strong>{{statusCounts.activeItemsCount}}</strong>
+                    <small>Active issues</small>
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl pb-4 text-success closed-issues">
+                <span class="comp-label">
+                    <strong>{{Counts.closedItemsCount}}</strong>
+                    <small>Closed issues</small>
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl pb-4 text-danger open-issues">
+                <span class="comp-label">
+                    <strong>{{statusCounts.openItemsCount}}</strong>
+                    <small>Open issues</small>
+                </span>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl pb-4 close-rate">
+                <span class="comp-label">
+                    <strong>{{statusCounts.closeRate | number:'1.0-0'}}%</strong>
+                    <small>Close rate</small>
+                </span>
+                <p class="m-0 small text-uppercase text-muted">
+                    Highest:
+                    100%
+                    on Oct 11, 2018
+                </p>
+                <p class="m-0 small text-uppercase text-muted">
+                    Lowest:
+                    20%
+                    on Oct 9, 2018
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>All issues</h3>
+
+            </div>
+        </div> -->
+        <!-- <div class=""> -->
+        <div class="">
+            <form class="k-form k-form-horizontal" [formGroup]="registerForm">
+                <fieldset class="k-form-fieldset row">
+                    <!-- <legend class="k-form-legend">User Details</legend> -->
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="firstName" text="MRN :"></kendo-label>
+                        <input class="p-p-col-12" formControlName="firstName" kendoTextBox #firstName required />
+
+                        <!-- <kendo-formhint>Your first name</kendo-formhint> -->
+                        <kendo-formerror>Error: First name is required</kendo-formerror>
+                    </kendo-formfield>
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="firstName" text="First Name :"></kendo-label>
+                        <input class="p-col-12" formControlName="firstName" kendoTextBox #firstName required />
+
+                        <!-- <kendo-formhint>Your first name</kendo-formhint> -->
+                        <kendo-formerror>Error: First name is required</kendo-formerror>
+                    </kendo-formfield>
+
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="lastName" text="Middle Name :"></kendo-label>
+                        <input class="p-col-12" formControlName="lastName" kendoTextBox #lastName required />
+
+                        <!-- <kendo-formhint>Your last name</kendo-formhint> -->
+                        <kendo-formerror>Error: Last name is required</kendo-formerror>
+                    </kendo-formfield>
+
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="lastName" text="Family Name :"></kendo-label>
+                        <input class="p-col-12" formControlName="lastName" kendoTextBox #lastName required />
+
+                        <!-- <kendo-formhint>Your last name</kendo-formhint> -->
+                        <kendo-formerror>Error: Last name is required</kendo-formerror>
+                    </kendo-formfield>
+
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="email" text="DOB :"></kendo-label>
+                        <input class="p-col-12" formControlName="email" kendoTextBox #email required />
+
+                        <!-- <kendo-formhint>Your active email</kendo-formhint> -->
+                        <kendo-formerror>Error: Not valid email format</kendo-formerror>
+                    </kendo-formfield>
+
+                    <!-- <kendo-formfield class="" [orientation]="'horizontal'">
+                  <div class="k-checkbox-wrap">
+                     <input  class="p-col-12"
+                      #acceptNews
+                      type="checkbox"
+                      kendoCheckBox
+                      formControlName="acceptNews"
+                    />
+                    <kendo-label class="p-col-12 mb-2 mb-md-0"
+                      [for]="acceptNews"
+                      class="k-checkbox-label"
+                      text="I want to receive notifications"
+                    ></kendo-label>
+                  </div>
+                </kendo-formfield> -->
+
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="email" text="Nationality :"></kendo-label>
+                        <input class="p-col-12" formControlName="email" kendoTextBox #email required />
+
+                        <!-- <kendo-formhint>Your active email</kendo-formhint> -->
+                        <kendo-formerror>Error: Not valid email format</kendo-formerror>
+                    </kendo-formfield>
+                    <kendo-formfield class="" [orientation]="'horizontal'">
+                        <kendo-label class="p-col-12 mb-2 mb-md-0" [for]="email" text="Mobile# :"></kendo-label>
+                        <input class="p-col-12" formControlName="email" kendoTextBox #email required />
+
+                        <!-- <kendo-formhint>Your active email</kendo-formhint> -->
+                        <kendo-formerror>Error: Not valid email format</kendo-formerror>
+                    </kendo-formfield>
+                </fieldset>
+                <div class="k-form-buttons .k-actions-center">
+                    <button class="k-button k-primary" kendoButton (click)="submitForm()">
+                    Submit
+                  </button>
+                    <button class="k-button" kendoButton (click)="clearForm()">Clear</button>
+                </div>
+
+            </form>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>
+
+<div class="card card-white">
+    <div class="card-block">
+        <kendo-grid [kendoGridBinding]="gridView" kendoGridSelectBy="id" [selectedKeys]="mySelection" [pageSize]="10" [pageable]="true" [sortable]="true" [reorderable]="true" [resizable]="true" [height]="500" [columnMenu]="{ filter: true }">
+            <!-- <ng-template kendoGridToolbarTemplate>
+          <input
+            placeholder="Search in all columns..."
+            kendoTextBox
+            (input)="onFilter($event.target.value)"
+          />
+          <kendo-grid-spacer></kendo-grid-spacer>
+          <button kendoGridExcelCommand type="button" icon="file-excel">
+            Export to Excel
+          </button>
+          <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
+        </ng-template> -->
+            <!-- <kendo-grid-checkbox-column
+          [width]="45"
+          [class]="{ 'text-center': true }"
+          [resizable]="false"
+          [columnMenu]="false"
+          showSelectAll="true"
+        ></kendo-grid-checkbox-column> -->
+            <!-- <kendo-grid-column-group title="Employee" [columnMenu]="false"> -->
+            <kendo-grid-column field="full_name" title="Contact Name" [width]="220">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <div class="customer-photo" [ngStyle]="{ 'background-image': photoURL(dataItem) }"></div>
+                    <div class="customer-name">{{ dataItem.full_name }}</div>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="job_title" title="Id" [width]="70">
+            </kendo-grid-column>
+            <kendo-grid-column field="country" title="Age" [width]="100" [class]="{ 'text-center': true }" [resizable]="false">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <img class="flag" [src]="flagURL(dataItem)" width="30" />
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="is_online" title="Status" [width]="100" [class]="{ 'text-center': true }" [resizable]="false" filter="boolean">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <span *ngIf="dataItem.is_online === 'Approved'" class="badge badge-success">Approved</span
+              >
+              <span
+                *ngIf="dataItem.is_online === 'Cancelled'"
+                class="badge badge-danger"
+                >Cancelled</span
+              >
+              <span
+              *ngIf="dataItem.is_online === 'Pending'"
+              class="badge badge-warning"
+              >Pending</span
+            >
+            </ng-template>
+          </kendo-grid-column>
+        <!-- <kendo-grid-column-group title="Performance" [columnMenu]="false">
+          <kendo-grid-column
+            field="rating"
+            title="Rating"
+            [width]="110"
+            [resizable]="false"
+            filter="numeric"
+          >
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <kendo-rating [value]="dataItem.rating" [max]="5"></kendo-rating>
+            </ng-template>
+          </kendo-grid-column>
+          <kendo-grid-column
+            field="target"
+            title="Engagement"
+            [width]="230"
+            [resizable]="false"
+            filter="numeric"
+          >
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <kendo-sparkline
+                type="bar"
+                [data]="dataItem.target"
+                [tooltip]="{ visible: false }"
+                [transitions]="true"
+                [seriesDefaults]="{
+                  labels: { background: 'none', visible: true, format: '{0}%' }
+                }"
+              >
+                <kendo-chart-area opacity="0" [width]="200"></kendo-chart-area>
+                <kendo-chart-value-axis>
+                  <kendo-chart-value-axis-item [min]="0" [max]="130">
+                  </kendo-chart-value-axis-item>
+                </kendo-chart-value-axis>
+              </kendo-sparkline>
+            </ng-template>
+          </kendo-grid-column>
+          <kendo-grid-column
+            field="budget"
+            title="Budget"
+            [width]="100"
+            filter="numeric"
+          >
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <span [ngClass]="{ 'red text-bold': dataItem.budget < 0 }">{{
+                dataItem.budget | currency
+              }}</span>
+                </ng-template>
+            </kendo-grid-column>
+            </kendo-grid-column-group> -->
+            <!-- <kendo-grid-column-group title="Contacts" [columnMenu]="false"> -->
+            <kendo-grid-column class="font-color-primary" title="Phone" [width]="130">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <svg style="fill:#28bfba;" enable-background="new -281.85 -2.67 1024 1024" height="20" version="1.1" viewBox="-281.85 -2.67 1024 1024" width="20" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path d="M504.682,259.996c0,2.025-1.642,3.667-3.667,3.667l0,0c-2.025,0-3.666-1.642-3.666-3.667v-57.999  c0-2.025,1.641-3.667,3.666-3.667l0,0c2.025,0,3.667,1.642,3.667,3.667V259.996z" fill="#696971"/><path d="M502.35,73v872.66c0,37.56-30.45,68-68,68H75.68  c-37.55,0-68-30.44-68-68V343.81c-0.55-0.18-1.04-0.49-1.44-0.89c-0.66-0.66-1.07-1.58-1.07-2.59v-58c0-1.63,1.05-3,2.51-3.49  v-15.36c-0.55-0.19-1.04-0.49-1.44-0.89c-0.66-0.66-1.07-1.58-1.07-2.59v-58c0-1.63,1.05-3,2.51-3.49v-38.45  C6.15,159.7,5,158.32,5,156.66v-30c0-0.97,0.39-1.84,1.03-2.47c0.45-0.45,1.01-0.78,1.65-0.93V73c0-37.56,30.45-68,68-68h358.67  C471.9,5,502.35,35.44,502.35,73z" fill="none" stroke="#28bfba" stroke-miterlimit="10" stroke-width="10"/><rect fill="none" height="777" stroke="#000000" stroke-miterlimit="10" stroke-width="10" width="438" x="36.015" y="120.496"/><circle cx="255.015" cy="37.746" fill="none" r="5" stroke="#000000" stroke-miterlimit="10" stroke-width="10"/><circle cx="186.167" cy="65.746" fill="none" r="7.5" stroke="#000000" stroke-miterlimit="10" stroke-width="10"/><path d="M289.265,65.996c0,2.347-1.903,4.25-4.25,4.25h-60  c-2.347,0-4.25-1.903-4.25-4.25l0,0c0-2.347,1.903-4.25,4.25-4.25h60C287.362,61.746,289.265,63.649,289.265,65.996L289.265,65.996z  " fill="none" stroke="#28bfba" stroke-miterlimit="10" stroke-width="10"/><ellipse cx="255.015" cy="952.496" fill="none" rx="31.5" ry="32" stroke="#28bfba" stroke-miterlimit="10" stroke-width="10"/><ellipse cx="193.667" cy="58.496" fill="none" rx="0" ry="0.25" stroke="#28bfba" stroke-miterlimit="10" stroke-width="10"/></svg>                    {{dataItem.phone}} </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="address" title="Address" [width]="200">
+            </kendo-grid-column>
+            <!-- </kendo-grid-column-group> -->
+            <kendo-grid-column title="Actions" [width]="130">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <span class="pr-2"><i class="fa fa-bicycle fa-5x circle-icon send">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style=" fill:#fff;">
+                    <path d="M15.379,19.1403 L12.108,12.5993 L19.467,5.2413 L15.379,19.1403 Z M4.86,8.6213 L18.76,4.5343 L11.401,11.8923 L4.86,8.6213 Z M3.359,8.0213 C2.923,8.1493 2.87,8.7443 3.276,8.9483 L11.128,12.8733 L15.053,20.7243 C15.256,21.1303 15.852,21.0773 15.98,20.6413 L20.98,3.6413 C21.091,3.2623 20.739,2.9093 20.359,3.0213 L3.359,8.0213 Z"/>
+                  </svg>
+                  
+                </i>
+                </span>
+                    <span class="pr-2"><i class="fa fa-bicycle fa-5x circle-icon edit">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                  width="15" height="15"
+                  viewBox="0 0 50 50"
+                  style=" fill:#fff;"><path d="M 43.125 2 C 41.878906 2 40.636719 2.488281 39.6875 3.4375 L 38.875 4.25 L 45.75 11.125 C 45.746094 11.128906 46.5625 10.3125 46.5625 10.3125 C 48.464844 8.410156 48.460938 5.335938 46.5625 3.4375 C 45.609375 2.488281 44.371094 2 43.125 2 Z M 37.34375 6.03125 C 37.117188 6.0625 36.90625 6.175781 36.75 6.34375 L 4.3125 38.8125 C 4.183594 38.929688 4.085938 39.082031 4.03125 39.25 L 2.03125 46.75 C 1.941406 47.09375 2.042969 47.457031 2.292969 47.707031 C 2.542969 47.957031 2.90625 48.058594 3.25 47.96875 L 10.75 45.96875 C 10.917969 45.914063 11.070313 45.816406 11.1875 45.6875 L 43.65625 13.25 C 44.054688 12.863281 44.058594 12.226563 43.671875 11.828125 C 43.285156 11.429688 42.648438 11.425781 42.25 11.8125 L 9.96875 44.09375 L 5.90625 40.03125 L 38.1875 7.75 C 38.488281 7.460938 38.578125 7.011719 38.410156 6.628906 C 38.242188 6.246094 37.855469 6.007813 37.4375 6.03125 C 37.40625 6.03125 37.375 6.03125 37.34375 6.03125 Z"></path></svg>                </i>
+                </span>
+                    <span class="pr-2"><i class="fa fa-bicycle fa-5x circle-icon delete">
+                  <svg width="15" height="15"  version="1.1" viewBox="0 0 98 137" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style=" fill:#fff;">
+                  <defs/><path d="M75.6,44.8v73c0,3.4-2.8,6.2-6.2,6.2H21.3c-3.4,0-6.2-2.8-6.2-6.2v-73H75.6L75.6,44.8z M59.9,52.9v62.8h3.6V52.9H59.9  L59.9,52.9z M43.6,52.9v62.8h3.6V52.9H43.6L43.6,52.9z M27.3,52.9v62.8h3.6V52.9H27.3L27.3,52.9z M31.3,27.9v-5.2  c0-3.3,2.6-5.9,5.9-5.9h16.4c3.3,0,5.9,2.6,5.9,5.9v5.2h18.1c3.4,0,6.2,2.8,6.2,6.2v4.3H7V34c0-3.4,2.8-6.2,6.2-6.2H31.3L31.3,27.9z   M37.2,20.8c-1,0-1.8,0.8-1.8,1.8v5.2h20.1v-5.2c0-1-0.8-1.8-1.8-1.8H37.2L37.2,20.8z"/><rect style="fill:none;" height="137" id="_x3C_Slice_x3E__100_" width="98"/></svg></i>
+                </span>
+                </ng-template>
+            </kendo-grid-column>
+
+            <kendo-grid-pdf fileName="Employees.pdf" [repeatHeaders]="true"></kendo-grid-pdf>
+            <kendo-grid-excel fileName="Employees.xlsx"></kendo-grid-excel>
+        </kendo-grid>
+    </div>
+</div>

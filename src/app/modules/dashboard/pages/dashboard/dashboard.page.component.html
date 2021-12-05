@@ -1,0 +1,17 @@
+<div class="dashboard">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center px-1 my-1">
+
+        <div class="col-md order-md-first text-center text-md-left pl-0">
+            <!-- <h2>
+                <span class="small text-uppercase text-muted d-block">Statistics</span>
+                <span>Date</span>
+            </h2> -->
+            <!-- <button kendoButton icon="refresh" (click)="refreshBreadCrumb()">Refresh breadcrumb</button> -->
+            <kendo-breadcrumb class="pl-0"
+            [items]="items"
+          ></kendo-breadcrumb>
+        </div>
+    </div>
+    <app-active-issues [statusCounts]="statusCounts$ | async"></app-active-issues>
+</div>

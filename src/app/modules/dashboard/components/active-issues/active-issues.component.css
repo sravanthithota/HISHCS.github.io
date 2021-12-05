@@ -1,0 +1,54 @@
+.comp-label strong {
+    font-size: 4em;
+    line-height: 1;
+    font-weight: 200;
+    display: block;
+}
+
+.comp-label small {
+    font-size: .7em;
+    text-transform: uppercase;
+    display: block;
+}
+
+.k-form-field>div>input.k-textbox {
+    width: 100% !important;
+}
+
+.example-wrap {
+    display: flex;
+    justify-content: left;
+}
+
+.customer-photo {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: 32px 35px;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 32px;
+    box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+}
+
+.customer-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    padding-left: 10px;
+}
+
+.red {
+    color: #d9534f;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+
+/* .k-form {
+    width: 400px;
+} */
